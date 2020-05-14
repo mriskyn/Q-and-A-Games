@@ -46,11 +46,7 @@ export default {
   },
   methods: {
     EnterRoom() {
-      this.$store.dispatch('inputName', {
-        name: this.name,
-        skor: 0,
-        isPlaying: false,
-      });
+      this.$store.dispatch('inputName', { name: this.name, score: 0 });
       // socket.emit('input-name',this.name)
       this.$router.push({ name: 'Room' });
       this.name = '';

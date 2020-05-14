@@ -19,6 +19,45 @@
         </div>
       </div>
       <button class="mt-2 btn-block" @click="next">Next</button>
+
+
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-toggle="modal"
+        data-target="#staticBackdrop"
+      >
+        Finish
+      </button>
+
+
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-backdrop="static"
+        data-keyboard="false"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Congratulation</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              You Got Score : 0
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -32,14 +71,14 @@ export default {
     return {
       datas: null,
       keys: null,
-      score: 0,
       page: 1,
     };
   },
   methods: {
     checkAnswer(answer, key) {
       if (answer === key) {
-        this.score += 1;
+        console.log(this.$store.state.user);
+        this.$store.state.user.score += 1;
       }
     },
     next() {

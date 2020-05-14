@@ -76,8 +76,10 @@ export default {
     },
   },
   created() {
-    socket.on('start-game', () => {
-      this.$router.push('/game');
+    socket.on('play', (data) => {
+      if (data) {
+        this.$router.push('/game');
+      }
     });
     socket.on('transfer-room', (data) => {
       this.rooms = data;
