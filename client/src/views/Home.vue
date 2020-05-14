@@ -11,7 +11,7 @@ import LoginPage from '@/components/LoginPage.vue';
 export default {
   name: 'Home',
   components: {
-    LoginPage
+    LoginPage,
   },
 };
 </script>

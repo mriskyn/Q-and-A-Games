@@ -1,78 +1,93 @@
 <template>
   <div>
-      <div>
-        <div class="row">
-          <div class="card col-6" style="width: 18rem;" v-for="(member,index) in members" :key="index" :member="member">
-              <div class="card-body">
-                  <h5 class="card-title">Hello , {{member.name}} Welcome to Game!!!</h5>
-              </div>
+    <div>
+      <div class="row">
+        <div
+          class="card col-6"
+          style="width: 18rem;"
+          v-for="(member,index) in members"
+          :key="index"
+          :member="member"
+        >
+          <div class="card-body">
+            <h5 class="card-title">Hello , {{member.name}} Welcome to Game!!!</h5>
           </div>
         </div>
       </div>
+    </div>
 
-
-      <!-- <div>
+    <!-- <div>
           <div class="form-group">
               <label for="exampleInputEmail1">Create your Room</label>
-              <input type="text" class="form-control" v-model='room' id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input
+                type="text"
+                class="form-control"
+                v-model='room'
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+              >
           </div>
           <button @click="createRoom" type="submit" class="btn btn-primary">Create</button>
       </div>
 
       <div>
         <div class="row">
-          <div class="card col-6" style="width: 18rem;" v-for="(server,index) in rooms" :key="index" :server="server">
+          <div
+            class="card col-6"
+            style="width: 18rem;"
+            v-for="(server,index) in rooms"
+            :key="index"
+            :server="server"
+          >
               <div class="card-body">
                   <h5 class="card-title">{{server}}</h5>
                   <button class="btn btn-primary">Join</button>
               </div>
           </div>
         </div>
-      </div> -->
+    </div>-->
 
-      <div v-if="members.length>1">
-        <button @click="buttonStart" class="btn btn-primary">Start Game</button>
-      </div>
-
-
+    <div v-if="members.length>1">
+      <button @click="buttonStart" class="btn btn-primary">Start Game</button>
+    </div>
   </div>
 </template>
 
 <script>
 import io from 'socket.io-client';
-const serverUrl='http://localhost:3000'
-const socket =io(serverUrl)
+
+const serverUrl = 'http://localhost:3000';
+const socket = io(serverUrl);
 
 export default {
-    data(){
-      return{
-        members:[],
-        room:'',
-        rooms:[]
-      }
+  data() {
+    return {
+      members: [],
+      room: '',
+      rooms: [],
+    };
+  },
+  methods: {
+    createRoom() {
+      socket.emit('input-room', this.room);
     },
-    methods:{
-        createRoom(){
-          socket.emit('input-room',this.room)
-        },
-        buttonStart(){
-          socket.emit('start',true)
-        }
+    buttonStart() {
+      socket.emit('start', true);
     },
-    created(){
-      socket.on('start-game',()=>{
-        this.$router.push('/game')
-      })
-      socket.on('transfer-room',data=>{
-        this.rooms=data
-      })
-      socket.on('transfer-name',data=>{
-          this.members=data
-    })
-    }
-}
+  },
+  created() {
+    socket.on('start-game', () => {
+      this.$router.push('/game');
+    });
+    socket.on('transfer-room', (data) => {
+      this.rooms = data;
+    });
+    socket.on('transfer-name', (data) => {
+      this.members = data;
+    });
+  },
+};
 </script>
 
 <style>
-
 </style>
