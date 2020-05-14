@@ -64,7 +64,8 @@ export default {
       socket.emit('input-room', this.room);
     },
     buttonStart() {
-      socket.emit('start', true);
+      this.$store.dispatch('startGame',true)
+      // socket.emit('start', true);
     },
   },
   created() {

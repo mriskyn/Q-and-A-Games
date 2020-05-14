@@ -15,9 +15,9 @@ export default new Vuex.Store({
     inputName(context, payload) {
       socket.emit('input-name', payload);
     },
-    transferName() {
-
-    },
+    startGame(context,payload){
+      socket.emit('start', payload);
+    }
   },
   modules: {
   },
