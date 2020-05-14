@@ -20,7 +20,12 @@ io.on('connection', (socket) => {
   })
 
   socket.on('start',(data)=>{
-      io.emit('play',data)
+    io.emit('play',data)
+  })
+
+  socket.on('winner',(data)=>{
+    console.log('test')
+    socket.broadcast.emit("Winner",data)
   })
 
 

@@ -1,6 +1,6 @@
 <template>
   <div>
-    
+
 
       <div>
         <div class="row">
@@ -32,10 +32,10 @@
         </div>
       </div> -->
 
-    <iframe src="../assets/bensound.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
+    <!-- <iframe src="../assets/bensound.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
     <audio id="audio" controls loop hidden allow="autoplay" autoplay="autoplay">
       <source src="../assets/bensound.mp3" type="audio/mp3">
-    </audio>
+    </audio> -->
 
       <div v-if="members.length>1">
         <button @click="buttonStart" class="btn btn-primary">Start Game</button>
@@ -64,12 +64,11 @@ export default {
       socket.emit('input-room', this.room);
     },
     buttonStart() {
-      this.$store.dispatch('startGame',true)
+      this.$store.dispatch('startGame', true);
       // socket.emit('start', true);
     },
   },
   created() {
-    
     socket.on('play', (data) => {
       if (data) {
         this.$router.push('/game');
@@ -83,7 +82,7 @@ export default {
     socket.on('transfer-name', (data) => {
       this.members = data;
     });
-  }
+  },
 };
 </script>
 
