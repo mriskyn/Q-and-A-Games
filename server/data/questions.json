@@ -1,0 +1,112 @@
+[
+    {
+        "id": 1,
+        "question": "Tahukah kamu, mengapa motor berhenti di depan lampu merah?",
+        "answers": {
+            "a": "karena motornya abis bensinnya",
+            "b": "karena motornya direm. Coba kalau nggak direm bisa bahaya tuh.",
+            "c": "karena motornya abis bensinnya",
+            "d": "karena kalo berhenti di rumah"
+        },
+        "key": "karena motornya direm. Coba kalau nggak direm bisa bahaya tuh."
+    },
+    {
+        "id": 2,
+        "question": "Kenapa di komputer ada tulisan ENTER?",
+        "answers": {
+            "a": "karena kalo tulisannya ENTAR, programnya ngga jalan-jalan, dong…",
+            "b": "karena kalo ga ada ENTER, ga bisa jalanin nodemon app.js",
+            "c": "karena kalo tulisannya LIVE CODE, muncul icon :besoklivecode:",
+            "d": "karena kalo ga ada ENTER, berarti error 404"
+        },
+        "key": "karena kalo tulisannya ENTAR, programnya ngga jalan-jalan, dong…"
+    },
+    {
+        "id": 3,
+        "question": "Tahukah kamu, mengapa motor berhenti di depan lampu merah?",
+        "answers": {
+            "a": "karena motornya abis bensinnya",
+            "b": "karena motornya direm. Coba kalau nggak direm bisa bahaya tuh.",
+            "c": "karena motornya abis bensinnya",
+            "d": "karena kalo berhenti di rumah"
+        },
+        "key": "karena motornya direm. Coba kalau nggak direm bisa bahaya tuh."
+    },
+    {
+        "id": 4,
+        "question": "Kenapa di komputer ada tulisan ENTER?",
+        "answers": {
+            "a": "karena kalo tulisannya ENTAR, programnya ngga jalan-jalan, dong…",
+            "b": "karena kalo ga ada ENTER, ga bisa jalanin nodemon app.js",
+            "c": "karena kalo tulisannya LIVE CODE, muncul icon :besoklivecode:",
+            "d": "karena kalo ga ada ENTER, berarti error 404"
+        },
+        "key": "karena kalo tulisannya ENTAR, programnya ngga jalan-jalan, dong…"
+    },
+    {
+        "id": 5,
+        "question": "Tahukah kamu, mengapa motor berhenti di depan lampu merah?",
+        "answers": {
+            "a": "karena motornya abis bensinnya",
+            "b": "karena motornya direm. Coba kalau nggak direm bisa bahaya tuh.",
+            "c": "karena motornya abis bensinnya",
+            "d": "karena kalo berhenti di rumah"
+        },
+        "key": "karena motornya direm. Coba kalau nggak direm bisa bahaya tuh."
+    },
+    {
+        "id": 6,
+        "question": "Kenapa di komputer ada tulisan ENTER?",
+        "answers": {
+            "a": "karena kalo tulisannya ENTAR, programnya ngga jalan-jalan, dong…",
+            "b": "karena kalo ga ada ENTER, ga bisa jalanin nodemon app.js",
+            "c": "karena kalo tulisannya LIVE CODE, muncul icon :besoklivecode:",
+            "d": "karena kalo ga ada ENTER, berarti error 404"
+        },
+        "key": "karena kalo tulisannya ENTAR, programnya ngga jalan-jalan, dong…"
+    },
+    {
+        "id": 7,
+        "question": "Tahukah kamu, mengapa motor berhenti di depan lampu merah?",
+        "answers": {
+            "a": "karena motornya abis bensinnya",
+            "b": "karena motornya direm. Coba kalau nggak direm bisa bahaya tuh.",
+            "c": "karena motornya abis bensinnya",
+            "d": "karena kalo berhenti di rumah"
+        },
+        "key": "karena motornya direm. Coba kalau nggak direm bisa bahaya tuh."
+    },
+    {
+        "id": 8,
+        "question": "Kenapa di komputer ada tulisan ENTER?",
+        "answers": {
+            "a": "karena kalo tulisannya ENTAR, programnya ngga jalan-jalan, dong…",
+            "b": "karena kalo ga ada ENTER, ga bisa jalanin nodemon app.js",
+            "c": "karena kalo tulisannya LIVE CODE, muncul icon :besoklivecode:",
+            "d": "karena kalo ga ada ENTER, berarti error 404"
+        },
+        "key": "karena kalo tulisannya ENTAR, programnya ngga jalan-jalan, dong…"
+    },
+    {
+        "id": 9,
+        "question": "Tahukah kamu, mengapa motor berhenti di depan lampu merah?",
+        "answers": {
+            "a": "karena motornya abis bensinnya",
+            "b": "karena motornya direm. Coba kalau nggak direm bisa bahaya tuh.",
+            "c": "karena motornya abis bensinnya",
+            "d": "karena kalo berhenti di rumah"
+        },
+        "key": "karena motornya direm. Coba kalau nggak direm bisa bahaya tuh."
+    },
+    {
+        "id": 10,
+        "question": "Kenapa di komputer ada tulisan ENTER?",
+        "answers": {
+            "a": "karena kalo tulisannya ENTAR, programnya ngga jalan-jalan, dong…",
+            "b": "karena kalo ga ada ENTER, ga bisa jalanin nodemon app.js",
+            "c": "karena kalo tulisannya LIVE CODE, muncul icon :besoklivecode:",
+            "d": "karena kalo ga ada ENTER, berarti error 404"
+        },
+        "key": "karena kalo tulisannya ENTAR, programnya ngga jalan-jalan, dong…"
+    }
+]
