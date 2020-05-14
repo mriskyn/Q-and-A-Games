@@ -1,5 +1,7 @@
 <template>
   <div>
+    
+
       <div>
         <div class="row">
           <div class="card col-6" style="width: 18rem;" v-for="(member,index) in members" :key="index" :member="member">
@@ -29,6 +31,11 @@
           </div>
         </div>
       </div> -->
+
+    <iframe src="../assets/bensound.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
+    <audio id="audio" controls loop hidden allow="autoplay" autoplay="autoplay">
+      <source src="../assets/bensound.mp3" type="audio/mp3">
+    </audio>
 
       <div v-if="members.length>1">
         <button @click="buttonStart" class="btn btn-primary">Start Game</button>
@@ -61,18 +68,21 @@ export default {
     },
   },
   created() {
+    
     socket.on('play', (data) => {
       if (data) {
         this.$router.push('/game');
       }
     });
+
+
     socket.on('transfer-room', (data) => {
       this.rooms = data;
     });
     socket.on('transfer-name', (data) => {
       this.members = data;
     });
-  },
+  }
 };
 </script>
 
