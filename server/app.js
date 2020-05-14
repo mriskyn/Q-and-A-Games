@@ -1,9 +1,19 @@
-<<<<<<< HEAD
-var app = require('express')();
-var http = require('http').createServer(app);
-var io = require('socket.io')(http);
-let user=[]
-let room=[]
+const express = require('express');
+const app = express();
+const cors = require('cors');
+const router = require('./routes');
+const http = require('http').createServer(app);
+const io = require('socket.io')(http);
+const PORT = process.env.PORT || 3000;
+let user= [];
+let room= [];
+
+app.use(cors());
+app.use(express.json())
+app.use(express.urlencoded( { extended: true }));
+
+app.use(router);
+
 io.on('connection', (socket) => {
 
 
@@ -13,20 +23,6 @@ io.on('connection', (socket) => {
     user.push(data)
     io.emit('transfer-name',user)
   })
-=======
-const express = require('express');
-const cors = require('cors');
-const router = require('./routes');
-const PORT = process.env.PORT || 3000;
-const app = express();
-
-app.use(cors());
-app.use(express.json())
-app.use(express.urlencoded( { extended: true }));
-
-app.use(router);
-
->>>>>>> questions-feature
 
   io.emit('transfer-room',room)
   socket.on('input-room',(data)=>{
@@ -41,6 +37,6 @@ app.use(router);
 
 });
 
-http.listen(3000, () => {
+http.listen(PORT, () => {
   console.log('listening on *:3000');
 });
