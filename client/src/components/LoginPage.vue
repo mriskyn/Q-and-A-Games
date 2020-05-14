@@ -21,30 +21,31 @@
 <script>
 // or with import syntax
 import io from 'socket.io-client';
-const serverUrl='http://localhost:3000'
-const socket =io(serverUrl)
+
+const serverUrl = 'http://localhost:3000';
+const socket = io(serverUrl);
 
 export default {
-    data(){
-        return{
-            name:'',
-            names:[]
-        }
+  data() {
+    return {
+      name: '',
+      names: [],
+    };
+  },
+  methods: {
+    EnterRoom() {
+      this.$store.dispatch('inputName', { name: this.name, skor: 0 });
+      // socket.emit('input-name',this.name)
+      this.$router.push({ name: 'Room' });
+      this.name = '';
     },
-    methods:{
-        EnterRoom(){
-            this.$store.dispatch('inputName',{name:this.name,skor:0,isPlaying:false})
-            // socket.emit('input-name',this.name)
-            this.$router.push({name:'Room'})
-            this.name=''
-        }
-    },
-    created(){
-        socket.on('transfer-name',data=>{
-            this.names=data
-        })
-    }
-}
+  },
+  created() {
+    socket.on('transfer-name', (data) => {
+      this.names = data;
+    });
+  },
+};
 </script>
 
 <style>

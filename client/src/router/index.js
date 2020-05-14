@@ -16,13 +16,13 @@ const routes = [
     path: '/room',
     name: 'Room',
     component: Room,
-    props:true
+    props: true,
   },
   {
-    path:'/game',
-    name:"Game",
+    path: '/game',
+    name: 'Game',
     component: Game,
-  }
+  },
 ];
 
 const router = new VueRouter({

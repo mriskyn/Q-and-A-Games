@@ -40,37 +40,40 @@
 
 <script>
 import io from 'socket.io-client';
-const serverUrl='http://localhost:3000'
-const socket =io(serverUrl)
+
+const serverUrl = 'http://localhost:3000';
+const socket = io(serverUrl);
 
 export default {
-    data(){
-      return{
-        members:[],
-        room:'',
-        rooms:[]
+  data() {
+    return {
+      members: [],
+      room: '',
+      rooms: [],
+    };
+  },
+  methods: {
+    createRoom() {
+      socket.emit('input-room', this.room);
+    },
+    buttonStart() {
+      socket.emit('start', true);
+    },
+  },
+  created() {
+    socket.on('play', (data) => {
+      if (data) {
+        this.$router.push('/game');
       }
-    },
-    methods:{
-        createRoom(){
-          socket.emit('input-room',this.room)
-        },
-        buttonStart(){
-          socket.emit('start',true)
-        }
-    },
-    created(){
-      socket.on('start-game',()=>{
-        this.$router.push('/game')
-      })
-      socket.on('transfer-room',data=>{
-        this.rooms=data
-      })
-      socket.on('transfer-name',data=>{
-          this.members=data
-    })
-    }
-}
+    });
+    socket.on('transfer-room', (data) => {
+      this.rooms = data;
+    });
+    socket.on('transfer-name', (data) => {
+      this.members = data;
+    });
+  },
+};
 </script>
 
 <style>

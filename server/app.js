@@ -19,8 +19,8 @@ io.on('connection', (socket) => {
     io.emit('transfer-room',room)
   })
 
-  socket.on('start',()=>{
-      io.of('/room').emit("start game")
+  socket.on('start',(data)=>{
+      io.emit('play',data)
   })
 
 
