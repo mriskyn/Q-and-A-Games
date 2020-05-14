@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "question": "Tahukah kamu, mengapa motor berhenti di depan lampu merah?",
+        "answers": {
+            "a": "karena motornya direm. Coba kalau nggak direm bisa bahaya tuh.",
+            "b": "karena motornya abis bensinnya",
+            "c": "karena motornya abis bensinnya",
+            "d": "karena kalo berhenti di rumah"
+        }
+    },
+    {
+        "id": 2,
+        "question": "Kenapa di komputer ada tulisan ENTER?",
+        "answers": {
+            "a": "karena kalo tulisannya ENTAR, programnya ngga jalan-jalan, dong…",
+            "b": "karena kalo ga ada ENTER, ga bisa jalanin nodemon app.js",
+            "c": "karena kalo tulisannya LIVE CODE, muncul icon :besoklivecode:",
+            "d": "karena kalo ga ada ENTER, berarti error 404"
+        }
+    },
+    {
+        "id": 3,
+        "question": "Tahukah kamu, mengapa motor berhenti di depan lampu merah?",
+        "answers": {
+            "a": "karena motornya direm. Coba kalau nggak direm bisa bahaya tuh.",
+            "b": "karena motornya abis bensinnya",
+            "c": "karena motornya abis bensinnya",
+            "d": "karena kalo berhenti di rumah"
+        }
+    },
+    {
+        "id": 4,
+        "question": "Kenapa di komputer ada tulisan ENTER?",
+        "answers": {
+            "a": "karena kalo tulisannya ENTAR, programnya ngga jalan-jalan, dong…",
+            "b": "karena kalo ga ada ENTER, ga bisa jalanin nodemon app.js",
+            "c": "karena kalo tulisannya LIVE CODE, muncul icon :besoklivecode:",
+            "d": "karena kalo ga ada ENTER, berarti error 404"
+        }
+    },
+    {
+        "id": 5,
+        "question": "Tahukah kamu, mengapa motor berhenti di depan lampu merah?",
+        "answers": {
+            "a": "karena motornya direm. Coba kalau nggak direm bisa bahaya tuh.",
+            "b": "karena motornya abis bensinnya",
+            "c": "karena motornya abis bensinnya",
+            "d": "karena kalo berhenti di rumah"
+        }
+    },
+    {
+        "id": 6,
+        "question": "Kenapa di komputer ada tulisan ENTER?",
+        "answers": {
+            "a": "karena kalo tulisannya ENTAR, programnya ngga jalan-jalan, dong…",
+            "b": "karena kalo ga ada ENTER, ga bisa jalanin nodemon app.js",
+            "c": "karena kalo tulisannya LIVE CODE, muncul icon :besoklivecode:",
+            "d": "karena kalo ga ada ENTER, berarti error 404"
+        }
+    },
+    {
+        "id": 7,
+        "question": "Tahukah kamu, mengapa motor berhenti di depan lampu merah?",
+        "answers": {
+            "a": "karena motornya direm. Coba kalau nggak direm bisa bahaya tuh.",
+            "b": "karena motornya abis bensinnya",
+            "c": "karena motornya abis bensinnya",
+            "d": "karena kalo berhenti di rumah"
+        }
+    },
+    {
+        "id": 8,
+        "question": "Kenapa di komputer ada tulisan ENTER?",
+        "answers": {
+            "a": "karena kalo tulisannya ENTAR, programnya ngga jalan-jalan, dong…",
+            "b": "karena kalo ga ada ENTER, ga bisa jalanin nodemon app.js",
+            "c": "karena kalo tulisannya LIVE CODE, muncul icon :besoklivecode:",
+            "d": "karena kalo ga ada ENTER, berarti error 404"
+        }
+    },
+    {
+        "id": 9,
+        "question": "Tahukah kamu, mengapa motor berhenti di depan lampu merah?",
+        "answers": {
+            "a": "karena motornya direm. Coba kalau nggak direm bisa bahaya tuh.",
+            "b": "karena motornya abis bensinnya",
+            "c": "karena motornya abis bensinnya",
+            "d": "karena kalo berhenti di rumah"
+        }
+    },
+    {
+        "id": 10,
+        "question": "Kenapa di komputer ada tulisan ENTER?",
+        "answers": {
+            "a": "karena kalo tulisannya ENTAR, programnya ngga jalan-jalan, dong…",
+            "b": "karena kalo ga ada ENTER, ga bisa jalanin nodemon app.js",
+            "c": "karena kalo tulisannya LIVE CODE, muncul icon :besoklivecode:",
+            "d": "karena kalo ga ada ENTER, berarti error 404"
+        }
+    }
+]
