@@ -1,14 +1,37 @@
 <template>
     <div class="jumbotron">
-        <div v-if='score < 3 && !this.$store.state.foundWinner'>
+        <!-- <div v-if='score < 3 && !this.$store.state.foundWinner'>
             <p>{{ questions[index].quest }}</p>
             <form @submit.prevent="submitAnswer">
                 <input type="text" v-model="answer">
                 <button type="submit">Submit</button>
             </form>
+        </div> -->
+        <div class="jumbotron jumbotron-fluid">
+          <h4 class="display-5 text-center" v-show="page !== 11">QUIZ PAGE ({{page}})</h4>
+          <div
+            class="container"
+            v-for="(data, index) in datas"
+            :key="index"
+            v-show="page === index + 1"
+          >
+            <h4 class="display-6 text-center">{{ data.question }}</h4>
+            <div class="row">
+              <div
+                class="answer col-md-5"
+                v-for="(answer, key) in data.answers"
+                :key="key"
+                @click="checkAnswer(answer, data.key)"
+              >
+                {{ key }}. {{ answer }}
+              </div>
+            </div>
+            <!-- <button class="mt-2 btn-block" @click="next">Next</button> -->
+          </div>
         </div>
 
-        <div v-if="this.$store.state.foundWinner">
+        <!-- <div v-if="this.$store.state.foundWinner"> -->
+        <div v-show="page === 11">
             <!-- <h1>{{message}}</h1> -->
             <!-- Button trigger modal -->
           <button
@@ -39,7 +62,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  {{ message }}
+                  You Got {{ this.score }}
                 </div>
                 <div class="modal-footer">
                   <button
@@ -59,6 +82,7 @@
 
 <script>
 import io from 'socket.io-client';
+import axios from 'axios';
 
 const serverUrl = 'http://localhost:3000';
 const socket = io(serverUrl);
@@ -80,10 +104,12 @@ export default {
           answer: 'hitam',
         },
       ],
-      score: 0,
       index: 0,
       answer: '',
       message: '',
+      datas: null,
+      score: 0,
+      page: 1,
     };
   },
   methods: {
@@ -94,15 +120,34 @@ export default {
         this.answer = '';
       }
 
-      if (this.score === 3) {
+      if (this.score === 11) {
         this.$store.dispatch('Winner');
         this.message = `${this.$store.state.name} is Winner`;
         socket.emit('winner', this.message);
       }
     },
+    checkAnswer(answer, key) {
+      if (answer === key) {
+        this.score += 1;
+      }
+      this.next();
+    },
+    next() {
+      this.page += 1;
+    },
   },
   created() {
-    console.log(this.$store.state);
+    axios({
+      url: 'http://localhost:3000/questions',
+      method: 'GET',
+    })
+      .then((res) => {
+        this.datas = res.data;
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
     socket.on('Winner', (data) => {
       this.$store.dispatch('Winner');
       this.message = data;
