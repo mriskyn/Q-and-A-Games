@@ -1,0 +1,112 @@
+[
+    {
+        "id": 1,
+        "question": "Tahukah kamu, mengapa motor berhenti di depan lampu merah?",
+        "answers": {
+            "a": "karena motornya abis bensinnya",
+            "b": "karena motornya direm. Coba kalau nggak direm bisa bahaya tuh.",
+            "c": "karena motornya abis bensinnya",
+            "d": "karena kalo berhenti di rumah"
+        },
+        "key": "karena motornya direm. Coba kalau nggak direm bisa bahaya tuh."
+    },
+    {
+        "id": 2,
+        "question": "Kenapa di komputer ada tulisan ENTER?",
+        "answers": {
+            "a": "karena kalo tulisannya ENTAR, programnya ngga jalan-jalan, dong…",
+            "b": "karena kalo ga ada ENTER, ga bisa jalanin nodemon app.js",
+            "c": "karena kalo tulisannya LIVE CODE, muncul icon :besoklivecode:",
+            "d": "karena kalo ga ada ENTER, berarti error 404"
+        },
+        "key": "karena kalo tulisannya ENTAR, programnya ngga jalan-jalan, dong…"
+    },
+    {
+        "id": 3,
+        "question": "DUA KOSONG DUA EMPAT?",
+        "answers": {
+            "a": "0044",
+            "b": "2044",
+            "c": "0044",
+            "d": "2024"
+        },
+        "key": "2024"
+    },
+    {
+        "id": 4,
+        "question": "Daya tahan tubuh dapat terjaga secara optimal, apabila...",
+        "answers": {
+            "a": "Banyak makan seenaknya",
+            "b": "Banyak rebahan",
+            "c": "Banyak pacar",
+            "d": "Makan"
+        },
+        "key": "Banyak pacar"
+    },
+    {
+        "id": 5,
+        "question": "Tujuan utama kedatangan Bangsa Portugis di Maluku...",
+        "answers": {
+            "a": "Menyebarkan agama katolik",
+            "b": "Mencari rempah rempah",
+            "c": "Mencari batu akik",
+            "d": "Mencari daerah jajahan"
+        },
+        "key": "Mencari batu akik"
+    },
+    {
+        "id": 6,
+        "question": "Malam jumat kliwon tidak ada angin. tidak ada hujan, krekeet pintu terbuka, berarti ada...",
+        "answers": {
+            "a": "Gaya",
+            "b": "Genderuwo",
+            "c": "Momen Gaya",
+            "d": "Mak Lampir"
+        },
+        "key": "Gaya"
+    },
+    {
+        "id": 7,
+        "question": "Manakah yang termasuk ciri-ciri kiamat sugra?",
+        "answers": {
+            "a": "Balon Meletus",
+            "b": "Ban bocor",
+            "c": "Cewek bilang, 'terserah'",
+            "d": "Isi sms 'have fun ya'"
+        },
+        "key": "Cewek bilang, 'terserah'"
+    },
+    {
+        "id": 8,
+        "question": "Kenapa di komputer ada tulisan ENTER?",
+        "answers": {
+            "a": "karena kalo tulisannya ENTAR, programnya ngga jalan-jalan, dong…",
+            "b": "karena kalo ga ada ENTER, ga bisa jalanin nodemon app.js",
+            "c": "karena kalo tulisannya LIVE CODE, muncul icon :besoklivecode:",
+            "d": "karena kalo ga ada ENTER, berarti error 404"
+        },
+        "key": "karena kalo tulisannya ENTAR, programnya ngga jalan-jalan, dong…"
+    },
+    {
+        "id": 9,
+        "question": "Kenapa Mathari tenggelam?",
+        "answers": {
+            "a": "Karena gravitasi",
+            "b": "Karena mau nyelam",
+            "c": "Karena mau ngumpet",
+            "d": "Karena gk bisa nyelam"
+        },
+        "key": "Karena gk bisa nyelam"
+    },
+    {
+        "id": 10,
+        "question": "Aku punya 7 lilin yang menyala, 2 lilin aku tiup, sisa berapa lilin yang aku punya?",
+        "answers": {
+            "a": "7",
+            "b": "9",
+            "c": "5",
+            "d": "sisanya"
+        },
+        "key": "7"
+    }
+]
