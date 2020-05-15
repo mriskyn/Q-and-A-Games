@@ -35,7 +35,7 @@ io.on('connection', (socket) => {
   })
 
   socket.on('winner',(data)=>{
-    console.log('test')
+    console.log(data)
     socket.broadcast.emit("Winner",data)
   })
 

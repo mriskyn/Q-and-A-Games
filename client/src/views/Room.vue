@@ -73,6 +73,7 @@ const serverUrl = 'http://localhost:3000';
 const socket = io(serverUrl);
 
 export default {
+  name: 'Room',
   data() {
     return {
       members: [],

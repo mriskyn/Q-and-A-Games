@@ -15,10 +15,10 @@
             :key="index"
             v-show="page === index + 1"
           >
-            <h4 class="display-6 text-center">{{ data.question }}</h4>
+            <h4 class="display-6 text-center" style="">{{ data.question }}</h4>
             <div class="row">
               <div
-                class="answer col-md-5"
+                class="answer col-md-4"
                 v-for="(answer, key) in data.answers"
                 :key="key"
                 @click="checkAnswer(answer, data.key)"
@@ -26,14 +26,11 @@
                 {{ key }}. {{ answer }}
               </div>
             </div>
-            <!-- <button class="mt-2 btn-block" @click="next">Next</button> -->
           </div>
         </div>
 
         <!-- <div v-if="this.$store.state.foundWinner"> -->
         <div v-show="page === 11">
-            <!-- <h1>{{message}}</h1> -->
-            <!-- Button trigger modal -->
           <button
             type="button"
             class="btn btn-primary"
@@ -62,7 +59,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  You Got {{ this.score }}
+                  Your Scores {{ this.score }} / 10
                 </div>
                 <div class="modal-footer">
                   <button
@@ -88,23 +85,24 @@ const serverUrl = 'http://localhost:3000';
 const socket = io(serverUrl);
 
 export default {
+  name: 'Game',
   data() {
     return {
-      questions: [
-        {
-          quest: 'warna apel??',
-          answer: 'merah',
-        },
-        {
-          quest: 'warna nanas??',
-          answer: 'kuning',
-        },
-        {
-          quest: 'warna rambut??',
-          answer: 'hitam',
-        },
-      ],
-      index: 0,
+      // questions: [
+      //   {
+      //     quest: 'warna apel??',
+      //     answer: 'merah',
+      //   },
+      //   {
+      //     quest: 'warna nanas??',
+      //     answer: 'kuning',
+      //   },
+      //   {
+      //     quest: 'warna rambut??',
+      //     answer: 'hitam',
+      //   },
+      // ],
+      // index: 0,
       answer: '',
       message: '',
       datas: null,
@@ -114,11 +112,11 @@ export default {
   },
   methods: {
     submitAnswer() {
-      if (this.answer === this.questions[this.index].answer) {
-        this.score += 1;
-        this.index += 1;
-        this.answer = '';
-      }
+      // if (this.answer === this.questions[this.index].answer) {
+      //   this.score += 1;
+      //   this.index += 1;
+      //   this.answer = '';
+      // }
 
       if (this.score === 11) {
         this.$store.dispatch('Winner');
@@ -159,17 +157,23 @@ export default {
 
 <style scoped>
 .row {
-  justify-content: center
+  justify-content: center;
+
 }
 .answer {
   text-align: center;
   border: 1px solid black;
-  margin: 1px;
+  border-radius: 20px;
+  margin: 2px;
 }
 
 .answer:hover{
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
     transform: scale(1.02);
     cursor: pointer;
+}
+
+.jumbotron {
+  border-radius: 30px;
 }
 </style>

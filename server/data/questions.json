@@ -23,58 +23,58 @@
     },
     {
         "id": 3,
-        "question": "Tahukah kamu, mengapa motor berhenti di depan lampu merah?",
+        "question": "DUA KOSONG DUA EMPAT?",
         "answers": {
-            "a": "karena motornya abis bensinnya",
-            "b": "karena motornya direm. Coba kalau nggak direm bisa bahaya tuh.",
-            "c": "karena motornya abis bensinnya",
-            "d": "karena kalo berhenti di rumah"
+            "a": "0044",
+            "b": "2044",
+            "c": "0044",
+            "d": "2024"
         },
-        "key": "karena motornya direm. Coba kalau nggak direm bisa bahaya tuh."
+        "key": "2024"
     },
     {
         "id": 4,
-        "question": "Kenapa di komputer ada tulisan ENTER?",
+        "question": "Daya tahan tubuh dapat terjaga secara optimal, apabila...",
         "answers": {
-            "a": "karena kalo tulisannya ENTAR, programnya ngga jalan-jalan, dong…",
-            "b": "karena kalo ga ada ENTER, ga bisa jalanin nodemon app.js",
-            "c": "karena kalo tulisannya LIVE CODE, muncul icon :besoklivecode:",
-            "d": "karena kalo ga ada ENTER, berarti error 404"
+            "a": "Banyak makan seenaknya",
+            "b": "Banyak rebahan",
+            "c": "Banyak pacar",
+            "d": "Makan"
         },
-        "key": "karena kalo tulisannya ENTAR, programnya ngga jalan-jalan, dong…"
+        "key": "Banyak pacar"
     },
     {
         "id": 5,
-        "question": "Tahukah kamu, mengapa motor berhenti di depan lampu merah?",
+        "question": "Tujuan utama kedatangan Bangsa Portugis di Maluku...",
         "answers": {
-            "a": "karena motornya abis bensinnya",
-            "b": "karena motornya direm. Coba kalau nggak direm bisa bahaya tuh.",
-            "c": "karena motornya abis bensinnya",
-            "d": "karena kalo berhenti di rumah"
+            "a": "Menyebarkan agama katolik",
+            "b": "Mencari rempah rempah",
+            "c": "Mencari batu akik",
+            "d": "Mencari daerah jajahan"
         },
-        "key": "karena motornya direm. Coba kalau nggak direm bisa bahaya tuh."
+        "key": "Mencari batu akik"
     },
     {
         "id": 6,
-        "question": "Kenapa di komputer ada tulisan ENTER?",
+        "question": "Malam jumat kliwon tidak ada angin. tidak ada hujan, krekeet pintu terbuka, berarti ada...",
         "answers": {
-            "a": "karena kalo tulisannya ENTAR, programnya ngga jalan-jalan, dong…",
-            "b": "karena kalo ga ada ENTER, ga bisa jalanin nodemon app.js",
-            "c": "karena kalo tulisannya LIVE CODE, muncul icon :besoklivecode:",
-            "d": "karena kalo ga ada ENTER, berarti error 404"
+            "a": "Gaya",
+            "b": "Genderuwo",
+            "c": "Momen Gaya",
+            "d": "Mak Lampir"
         },
-        "key": "karena kalo tulisannya ENTAR, programnya ngga jalan-jalan, dong…"
+        "key": "Gaya"
     },
     {
         "id": 7,
-        "question": "Tahukah kamu, mengapa motor berhenti di depan lampu merah?",
+        "question": "Manakah yang termasuk ciri-ciri kiamat sugra?",
         "answers": {
-            "a": "karena motornya abis bensinnya",
-            "b": "karena motornya direm. Coba kalau nggak direm bisa bahaya tuh.",
-            "c": "karena motornya abis bensinnya",
-            "d": "karena kalo berhenti di rumah"
+            "a": "Balon Meletus",
+            "b": "Ban bocor",
+            "c": "Cewek bilang, 'terserah'",
+            "d": "Isi sms 'have fun ya'"
         },
-        "key": "karena motornya direm. Coba kalau nggak direm bisa bahaya tuh."
+        "key": "Cewek bilang, 'terserah'"
     },
     {
         "id": 8,
@@ -89,24 +89,24 @@
     },
     {
         "id": 9,
-        "question": "Tahukah kamu, mengapa motor berhenti di depan lampu merah?",
+        "question": "Kenapa Mathari tenggelam?",
         "answers": {
-            "a": "karena motornya abis bensinnya",
-            "b": "karena motornya direm. Coba kalau nggak direm bisa bahaya tuh.",
-            "c": "karena motornya abis bensinnya",
-            "d": "karena kalo berhenti di rumah"
+            "a": "Karena gravitasi",
+            "b": "Karena mau nyelam",
+            "c": "Karena mau ngumpet",
+            "d": "Karena gk bisa nyelam"
         },
-        "key": "karena motornya direm. Coba kalau nggak direm bisa bahaya tuh."
+        "key": "Karena gk bisa nyelam"
     },
     {
         "id": 10,
-        "question": "Kenapa di komputer ada tulisan ENTER?",
+        "question": "Aku punya 7 lilin yang menyala, 2 lilin aku tiup, sisa berapa lilin yang aku punya?",
         "answers": {
-            "a": "karena kalo tulisannya ENTAR, programnya ngga jalan-jalan, dong…",
-            "b": "karena kalo ga ada ENTER, ga bisa jalanin nodemon app.js",
-            "c": "karena kalo tulisannya LIVE CODE, muncul icon :besoklivecode:",
-            "d": "karena kalo ga ada ENTER, berarti error 404"
+            "a": "7",
+            "b": "9",
+            "c": "5",
+            "d": "sisanya"
         },
-        "key": "karena kalo tulisannya ENTAR, programnya ngga jalan-jalan, dong…"
+        "key": "7"
     }
 ]
