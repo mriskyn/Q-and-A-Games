@@ -39,6 +39,11 @@ io.on('connection', (socket) => {
     socket.broadcast.emit("Winner",data)
   })
 
+  socket.on('Home',()=>{
+    io.emit('backhome')
+    user=[]
+  })
+
 
 });
 

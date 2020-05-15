@@ -7,8 +7,8 @@
                 <button type="submit">Submit</button>
             </form>
         </div> -->
-        <div class="jumbotron jumbotron-fluid">
-          <h4 class="display-5 text-center" v-show="page !== 11">QUIZ PAGE ({{page}})</h4>
+        <div class="jumbotron jumbotron-fluid" v-show="!this.$store.state.foundWinner">
+          <h4 class="display-5 text-center">QUIZ PAGE ({{page}})</h4>
           <div
             class="container"
             v-for="(data, index) in datas"
@@ -39,6 +39,8 @@
           >
             See The Winner!
           </button>
+
+          <button @click="back">Back to Home</button>
 
           <div
             class="modal fade"
@@ -73,6 +75,9 @@
               </div>
             </div>
           </div>
+        </div>
+        <div v-if="this.$store.state.foundWinner">
+             <h1>{{message}}</h1>
         </div>
     </div>
 </template>
@@ -120,6 +125,7 @@ export default {
 
       if (this.score === 11) {
         this.$store.dispatch('Winner');
+        console.log(this.$store.state.name)
         this.message = `${this.$store.state.name} is Winner`;
         socket.emit('winner', this.message);
       }
@@ -127,12 +133,23 @@ export default {
     checkAnswer(answer, key) {
       if (answer === key) {
         this.score += 1;
+        this.next()
       }
-      this.next();
+      if (this.score === 10) {
+        this.$store.dispatch('Winner');
+        console.log(this.$store.state.name)
+        this.message = `${this.$store.state.name} is Winner`;
+        socket.emit('winner', this.message);
+      }
+    //   this.next();
     },
     next() {
       this.page += 1;
     },
+    back(){
+        this.$router.push('/')
+        socket.emit('Home')
+    }
   },
   created() {
     axios({
@@ -151,6 +168,11 @@ export default {
       this.message = data;
       console.log(this.$store.state.foundWinner);
     });
+
+    socket.on('backhome',()=>{
+        this.$router.push('/')
+        this.score=0
+    })
   },
 };
 </script>
