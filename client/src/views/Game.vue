@@ -31,14 +31,6 @@
 
         <!-- <div v-if="this.$store.state.foundWinner"> -->
         <div v-show="page === 11">
-          <button
-            type="button"
-            class="btn btn-primary"
-            data-toggle="modal"
-            data-target="#staticBackdrop"
-          >
-            See The Winner!
-          </button>
 
           <button @click="back">Back to Home</button>
 
