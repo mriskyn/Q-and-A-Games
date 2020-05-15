@@ -7,11 +7,17 @@
                 <button type="submit">Submit</button>
             </form>
         </div>
-
+        
         <div v-if="this.$store.state.foundWinner">
             <h1>{{message}}</h1>
+            <button @click="BackHome">Back to Home</button>
         </div>
-    </div>
+
+        <iframe src="../assets/bensound.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
+        <audio id="audio" controls loop hidden allow="autoplay" autoplay="autoplay">
+        <source src="../assets/bensound.mp3" type="audio/mp3">
+        </audio>
+  </div>
 </template>
 
 <script>
@@ -32,8 +38,8 @@ export default {
           answer: 'kuning',
         },
         {
-          quest: 'warna rambut??',
-          answer: 'hitam',
+          quest: 'nama lain dari covid-19??',
+          answer: 'korona',
         },
       ],
       score: 0,
@@ -56,6 +62,10 @@ export default {
         socket.emit('winner', this.message);
       }
     },
+    BackHome(){
+        this.$router.push('/')
+        socket.emit('backHome')
+    }
   },
   created() {
     socket.on('Winner', (data) => {
@@ -63,6 +73,11 @@ export default {
       this.message = data;
       console.log(this.$store.state.foundWinner);
     });
+
+    socket.on('home',()=>{
+        this.$router.push('/')
+        this.score=0
+    })
   },
 };
 </script>
