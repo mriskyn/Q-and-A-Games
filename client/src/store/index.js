@@ -8,22 +8,32 @@ const socket = io(serverUrl);
 
 export default new Vuex.Store({
   state: {
-    user: [],
+    foundWinner: false,
+    name: '',
   },
   mutations: {
-    addUser(state, payload) {
-      console.log(payload, 'FROM mutation');
-      state.user.push(payload);
+    Winner(state) {
+      state.foundWinner = true;
+    },
+    User(state, payload) {
+      console.log(payload);
+      state.name = payload;
     },
   },
   actions: {
     inputName(context, payload) {
-      console.log(payload, 'FROM actions');
-      context.commit('addUser', payload);
+      // console.log(payload, 'FROM actions');
+      // context.commit('addUser', payload);
       socket.emit('input-name', payload);
     },
-    transferName() {
-
+    startGame(context, payload) {
+      socket.emit('start', payload);
+    },
+    Winner(context) {
+      context.commit('Winner');
+    },
+    User(context, payload) {
+      context.commit('User', payload);
     },
   },
   modules: {

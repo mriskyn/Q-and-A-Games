@@ -1,16 +1,19 @@
 <template>
   <div>
     <div>
-      <div class="row">
-        <div
-          class="card col-6"
-          style="width: 18rem;"
-          v-for="(member,index) in members"
-          :key="index"
-          :member="member"
-        >
-          <div class="card-body">
-            <h5 class="card-title">Hello , {{member.name}} Welcome to Game!!!</h5>
+      <div>
+        <h2 class="font-weight-bold">Waiting Room</h2>
+        <div class="row">
+          <div
+            class="card col-md-6"
+            style="width: 18rem;"
+            v-for="(member,index) in members"
+            :key="index"
+            :member="member"
+          >
+            <div class="card-body">
+              <h5 class="card-title">Hello , {{member.name}} Welcome to Game!!!</h5>
+            </div>
           </div>
         </div>
       </div>
@@ -47,8 +50,18 @@
         </div>
     </div>-->
 
-    <div v-if="members.length>1">
-      <button @click="buttonStart" class="btn btn-primary">Start Game</button>
+    <!-- <iframe
+        src="../assets/bensound.mp3"
+        allow="autoplay"
+        id="audio"
+        style="display: none">
+        </iframe>
+    <audio id="audio" controls loop hidden allow="autoplay" autoplay="autoplay">
+      <source src="../assets/bensound.mp3" type="audio/mp3">
+    </audio>-->
+
+    <div v-if="members.length > 1">
+      <button @click="buttonStart" class="btn btn-outline-primary mt-3">Start Game</button>
     </div>
   </div>
 </template>
@@ -72,7 +85,8 @@ export default {
       socket.emit('input-room', this.room);
     },
     buttonStart() {
-      socket.emit('start', true);
+      this.$store.dispatch('startGame', true);
+      // socket.emit('start', true);
     },
   },
   created() {
@@ -81,6 +95,7 @@ export default {
         this.$router.push('/game');
       }
     });
+
     socket.on('transfer-room', (data) => {
       this.rooms = data;
     });
@@ -91,5 +106,6 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+
 </style>

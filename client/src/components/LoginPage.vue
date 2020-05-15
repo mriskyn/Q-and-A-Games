@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="jumbotron">
+    <h1 class="display-4">Welcome to the Q & A Games!</h1>
     <div>
       <div class="form-group">
         <label for="exampleInputEmail1">Your Name</label>
@@ -13,11 +14,12 @@
       </div>
       <button @click="EnterRoom" type="submit" class="btn btn-primary">Submit</button>
     </div>
+    <hr class="my-4" />
     <div>
       <div
         class="card"
         style="width: 18rem;"
-        v-for="(name,index) in names"
+        v-for="(name, index) in names"
         :key="index"
         :name="name"
       >
@@ -46,7 +48,8 @@ export default {
   },
   methods: {
     EnterRoom() {
-      this.$store.dispatch('inputName', { name: this.name, score: 0 });
+      this.$store.dispatch('inputName', { name: this.name, skor: 0 });
+      this.$store.dispatch('User', this.name);
       // socket.emit('input-name',this.name)
       this.$router.push({ name: 'Room' });
       this.name = '';
@@ -60,5 +63,5 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 </style>
